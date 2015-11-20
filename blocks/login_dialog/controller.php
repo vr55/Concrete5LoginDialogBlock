@@ -27,13 +27,12 @@ class Controller extends BlockController
         return t( $this->btDescription );
     }
     
-	public function view()
-	{	        
-		$user = new User();
-		$this->set( "user", $user );
+    public function view()
+    {
+	$user = new User();
+	$this->set( "user", $user );
         $this->set( 'loginAction', View::url( '/login', 'authenticate', 'concrete' ) );
-       
-	}
+    }
 
     public function save( $args ) 
     {       
