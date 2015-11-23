@@ -57,7 +57,7 @@ defined('C5_EXECUTE') or die(_("Access Denied."));
             {?> 
                 <br />
                 <hr />             
-                <a href="/register" class="btn btn-block btn-success"><?php echo t( $RegisterButtonText ) ?></a>
+                <a href="/index.php/register" class="btn btn-block btn-success"><?php echo t( $RegisterButtonText ) ?></a>
             <?}?>             
             
         </div>
