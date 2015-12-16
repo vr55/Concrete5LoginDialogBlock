@@ -7,9 +7,9 @@ defined('C5_EXECUTE') or die(_("Access Denied."));
         echo $html->css( 'jquery-ui.css' );
         echo $html->javascript( 'jquery-ui.js' );
 
-        ?>        
+        ?>    <? echo $bID?>    
         <div class="title-caps">
-            <p><a style="cursor:pointer" class="open-login-dialog-button"><b><?php echo t('Login') ?></b></a></p>
+            <p><a style="cursor:pointer" class="open-login-dialog-button" id="<?php echo $bID?>_login_button"><b><?php echo t('Login') ?></b></a></p>
 
             <? if( in_array( Config::get( 'concrete.user.registration.type' ), array( 'validate_email', 'enabled', 'manual_approve' ) ) ) 
             { ?>
@@ -19,7 +19,7 @@ defined('C5_EXECUTE') or die(_("Access Denied."));
         </div>  
 
 
-        <div class="login">
+        <div class="login" id="<?php echo $bID?>_login">
             <h1><?php echo t( $DialogTitle ) ?></h1>
             <form method="post" action="<?php echo $loginAction; ?>">
                 <p>
@@ -68,7 +68,7 @@ defined('C5_EXECUTE') or die(_("Access Denied."));
     <script>
         $(function() 
         {
-            $(".login").dialog(
+            $("#<?php echo $bID?>_login").dialog(
             {
               autoOpen: false,          
               resizable: false,           
@@ -77,15 +77,15 @@ defined('C5_EXECUTE') or die(_("Access Denied."));
 
               open: function ( event, ui ) 
                 {
-                    $('.login').css('overflow', 'hidden'); 
+                    $('#<?php echo $bID?>_login').css('overflow', 'hidden'); 
                 }           
             });       
         });     
         
-        $('.open-login-dialog-button').click(function() 
+        $('#<?php echo $bID?>_login_button').click(function() 
         {
           
-          $(".login").dialog("open");
+          $("#<?php echo $bID?>_login").dialog("open");
 
         });       
     </script>
