@@ -7,7 +7,7 @@ defined('C5_EXECUTE') or die(_("Access Denied."));
         echo $html->css( 'jquery-ui.css' );
         echo $html->javascript( 'jquery-ui.js' );
 
-        ?>    <? echo $bID?>    
+        ?>  
         <div class="title-caps">
             <p><a style="cursor:pointer" class="open-login-dialog-button" id="<?php echo $bID?>_login_button"><b><?php echo t('Login') ?></b></a></p>
 
