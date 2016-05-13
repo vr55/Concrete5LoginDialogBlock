@@ -95,11 +95,12 @@ defined('C5_EXECUTE') or die(_("Access Denied."));
 
     if ( $user->isLoggedIn() )
     {?> 
-        <div class="title-caps"><?php echo t("Welcome:")?> <br />
-        <a href="/index.php/account"><?php echo $user->getUserName() ?></a>
-        <div style="font-size:16px">
-            <a href="<?php echo URL::to('/login', 'logout', Loader::helper('validation/token')->generate('logout'))?>"><?php echo t('Sign Out')?></a>
-        </div>
+        <div class="title-caps">
+	        <div><?php echo t("Welcome:")?></div>
+	        <div><a href="/index.php/account"><?php echo $user->getUserName() ?></a></div>
+	        <div>
+	            <a href="<?php echo URL::to('/login', 'logout', Loader::helper('validation/token')->generate('logout'))?>"><?php echo t('Sign Out')?></a>
+	        </div>
         </div>
 
 

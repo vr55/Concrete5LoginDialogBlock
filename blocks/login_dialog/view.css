@@ -149,3 +149,39 @@
 .lt-ie9 .login input[type=text], .lt-ie9 .login input[type=password] {
   line-height: 34px;
 }
+
+.in-line .title-caps p, .in-line .title-caps div
+{
+  float: left;
+  padding-right: 5px;
+}
+
+.font-16
+{
+  font-size: 16px;
+}
+
+.font-14
+{
+  font-size: 14px;
+}
+
+.font-12
+{
+  font-size: 12px;
+}
+
+.font-10
+{
+  font-size: 10px;
+}
+
+.font-8
+{
+  font-size: 8px;
+}
+
+.font-6
+{
+  font-size: 6px;
+}
