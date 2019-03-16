@@ -6,7 +6,6 @@ use Concrete\Core\Authentication\AuthenticationType;
 use Concrete\Core\Asset;
 use User;
 use Authentication;
-use Loader;
 use View;
 
 defined('C5_EXECUTE') or die("Access Denied.");

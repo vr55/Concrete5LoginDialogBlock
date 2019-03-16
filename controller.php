@@ -1,9 +1,10 @@
 <?php 
 namespace Concrete\Package\LoginDialog;
 
-use \Concrete\Core\Package\Package;
-use \Concrete\Core\Block\BlockType\BlockType;
-use Loader;
+use Concrete\Core\Package\Package;
+use Concrete\Core\Block\BlockType\BlockType;
+use Concrete\Core\Support\Facade\Database;
+
 defined('C5_EXECUTE') or die("Access Denied.");
  
 
@@ -38,8 +39,8 @@ class Controller extends Package
 	public function uninstall()
 	{
 		parent::uninstall();
-		$db = Loader::db();
-		$db->Execute( 'DROP TABLE IF EXISTS btLoginDialog' );
+		$db = Database::connection();
+		$db->executeQuery( 'DROP TABLE IF EXISTS btLoginDialog' );
 	}
 }
 
