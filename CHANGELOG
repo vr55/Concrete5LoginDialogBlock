@@ -1,1 +1,16 @@
-1.0 - Initial release
+0.9.2 fixed error with "Welcome nbsp"
+
+0.9.3 Fixed error with link to registration page
+
+0.9.4 Fixed error with multiple dialog windows if more than one block added on page
+
+0.9.5 Bug fixes
+
+0.9.6 Added ability to display Login/Register text in single line. See documentation for more info
+
+0.9.7 Fixed bug with autofocus
+
+0.9.8 
+    - Fixed "Code showing up" error on some php configurations
+    - Fixed "Popup visible before page loads" error
+    - Fixed z-index

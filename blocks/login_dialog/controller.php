@@ -3,12 +3,13 @@ namespace Concrete\Package\LoginDialog\Block\LoginDialog;
 
 use Concrete\Core\Block\BlockController;
 use Concrete\Core\Authentication\AuthenticationType;
+use Concrete\Core\Asset;
 use User;
 use Authentication;
 use Loader;
 use View;
 
-defined('C5_EXECUTE') or die(_("Access Denied."));
+defined('C5_EXECUTE') or die("Access Denied.");
 
 class Controller extends BlockController
 {
@@ -29,8 +30,9 @@ class Controller extends BlockController
     
     public function view()
     {
-	$user = new User();
-	$this->set( "user", $user );
+        $this->requireAsset( 'jquery/ui' );
+	    $user = new User();
+	    $this->set( "user", $user );
         $this->set( 'loginAction', View::url( '/login', 'authenticate', 'concrete' ) );
     }
 
