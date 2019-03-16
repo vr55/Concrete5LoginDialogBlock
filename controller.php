@@ -11,7 +11,7 @@ defined('C5_EXECUTE') or die("Access Denied.");
 class Controller extends Package
 {
 	protected $pkgHandle 			= 'login_dialog';
-	protected $appVersionRequired 	= '5.7.5.2';
+	protected $appVersionRequired 	= '5.7.5';
 	protected $pkgVersion 			= '0.9.8';
 	 
 	public function getPackageDescription()
